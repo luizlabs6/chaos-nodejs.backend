@@ -2,12 +2,12 @@
   "name": "one-nodejs.backend",
   "version": "1.0.0",
   "description": "Simple DevOps app using nodejs",
-  "main": "index.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "start": "node --import ./o11y/instrumentation.mjs index.js",
-    "dev": "NODE_OPTIONS='--import ./o11y/instrumentation.mjs' nodemon --env-file=.env index.js",
-    "test": "poku"
+    "start": "node --import ./src/o11y/instrumentation.js src/server.js",
+    "dev": "NODE_OPTIONS='--import ./src/o11y/instrumentation.js' nodemon --env-file=.env src/server.js",
+    "test": "poku src/tests"
   },
   "keywords": [
     "Nodejs"

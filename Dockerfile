@@ -8,4 +8,4 @@ RUN npm install
 
 COPY . .
 
-ENTRYPOINT [ "node", "index.js" ]
+ENTRYPOINT [ "node", "sre/index.js" ]
