@@ -1,4 +1,6 @@
 import express from "express";
+import logger from "./o11y/logger.mjs";
+
 const app = express();
 
 app.use(express.json());
@@ -6,9 +8,10 @@ app.use(express.json());
 const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  logger.info(`Server is running on port ${PORT}`);
 });
 
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'OK' });
+  logger.info('Health check called');
+  res.status(200).json({ status: 'Ok' });
 });
