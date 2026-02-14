@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node --import ./o11y/instrumentation.mjs index.js",
     "dev": "NODE_OPTIONS='--import ./o11y/instrumentation.mjs' nodemon --env-file=.env index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "poku"
   },
   "keywords": [
     "Nodejs"
@@ -24,6 +24,7 @@
     "pino": "^10.3.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^3.1.11",
+    "poku": "^3.0.3-canary.13a996a9"
   }
 }
