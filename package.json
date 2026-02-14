@@ -5,14 +5,21 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon --env-file=.env index.js",
+    "start": "node --import ./o11y/instrumentation.mjs index.js",
+    "dev": "NODE_OPTIONS='--import ./o11y/instrumentation.mjs' nodemon --env-file=.env index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["Nodejs"],
+  "keywords": [
+    "Nodejs"
+  ],
   "author": "http://github.com/luizbrito7",
   "license": "ISC",
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-node": "^0.69.0",
+    "@opentelemetry/sdk-metrics": "^2.5.1",
+    "@opentelemetry/sdk-node": "^0.212.0",
+    "@opentelemetry/sdk-trace-node": "^2.5.1",
     "express": "^5.2.1"
   },
   "devDependencies": {
