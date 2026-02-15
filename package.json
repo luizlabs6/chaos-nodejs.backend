@@ -1,5 +1,5 @@
 {
-  "name": "one-nodejs.backend",
+  "name": "chaos-nodejs.backend",
   "version": "1.0.0",
   "description": "Simple DevOps app using nodejs",
   "main": "src/server.js",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node --import ./src/o11y/instrumentation.js src/server.js",
     "dev": "NODE_OPTIONS='--import ./src/o11y/instrumentation.js' nodemon --env-file=.env src/server.js",
-    "test": "poku src/tests"
+    "test": "poku tests"
   },
   "keywords": [
     "Nodejs"
@@ -20,6 +20,7 @@
     "@opentelemetry/sdk-metrics": "^2.5.1",
     "@opentelemetry/sdk-node": "^0.212.0",
     "@opentelemetry/sdk-trace-node": "^2.5.1",
+    "cors": "^2.8.6",
     "express": "^5.2.1",
     "pino": "^10.3.1"
   },
